@@ -29,7 +29,8 @@ Working directory is pre-set to folder "UCI HAR Dataset" in the above downloaded
     * Name columns using feature data (this can be done at this step or later, I just find it more clear to name all the columns upfront)  
 
 * Step 2. Extracts only the measurements on the mean and standard deviation for each measurement
-    * Extract columns with name including "mean" or "std"  
+    * Extract columns with name including "mean()" or "std()"
+      (Please be aware that, columns like Angle- or -meanfreq should not be included, as project request the mean and std of the measurements! A further understanding of the file feature_info.txt would clarify that)
       
 
 * Step 3. Uses descriptive activity names to name the activities in the data set
