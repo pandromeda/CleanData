@@ -32,7 +32,9 @@ names(allData)[c(1,2)]<-c("subject","label")
 ##   each measurement.
 
 ## Since columns are named in previous step, only need to extract column with
-## name including "mean" or "std"
+## name including "mean()" or "std()"
+## Please be aware that columns such as "Angle-" or "-meanfreq" should not be included even if it contains mean/std! 
+## Because requirment for the project is the mean and std for each measures, a further understanding of file features_info.txt would clarify it.
 
 dataMeanStd <- allData[,c(1,2,grep("mean\\(\\)|std\\(\\)",colnames(allData)))]
 
